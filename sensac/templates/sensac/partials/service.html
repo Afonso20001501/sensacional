@@ -9,35 +9,20 @@
                 <div class="border-top border-primary w-25 mx-auto my-4"></div>
                 <p data-aos="fade-up"  class="lead ">For all of the champions in this world</p>
             </div>
+
             <div  class="row">
+              {% for servico in servicos  %}
                 <div class="col-md-4 col-ms-12">
                     <div  data-aos="flip-left"  class="card">
                         <div class="card-body">
                           <i class="fa-solid fa-code fa-beat"></i>
-                          <h5 class="card-title">Web Developer</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <h5 class="card-title">{{ servico.title }}</h5>
+                          <p class="card-text">{{ servico.desc }}</p>
                           <a href="#" class="btn btn-transi">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div   class="col-md-4 col-ms-12">
-                    <div data-aos="flip-up" class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-transi">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-4 col-ms-12">
-                    <div data-aos="flip-right"  class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-transi">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
+              {% endfor %}
             </div>
         </div>
       </section>

@@ -1,8 +1,9 @@
- {% load static %}
- 
+
+{% load static %}
+
  
  <!--SECTION  Publisher -->
-  <section id="contact" class="Contact">
+  <section id="contact" class="Contact info">
     <div class="container">
         <div class="col-ms-12 text-center mt-6 my-5">
             <h1 data-aos="fade-up"  class="text-dark pt-4">CONTACT</h1>
@@ -11,26 +12,27 @@
         </div>
         <div class="row">
             <div data-aos="fade-up"  class="col-md-6 col-ms-12">
-                <form class="row g-3">
+                <form action="" method="post" class="row g-3">
+                   {% csrf_token %}    
                     <div class="col-md-6">
                       <label for="inputEmail4" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4">
+                      <input type="email" name="email" class="form-control" id="inputEmail4">
                     </div>
                     <div class="col-md-6">
-                      <label for="inputPassword4" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="inputPassword4">
+                      <label for="inputEmail4" class="form-label">Full Name</label>
+                      <input type="name" name="nome" class="form-control" id="inputEmail4">
                     </div>
                     <div class="col-12">
                       <label for="inputAddress" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                      <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
                     </div>
                     <div class="col-12">
                       <label for="inputAddress2" class="form-label">Address 2</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      <input type="text" name="address_to" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                     </div>
                     <div class="col-md-6">
                       <label for="inputCity" class="form-label">City</label>
-                      <input type="text" class="form-control" id="inputCity">
+                      <input type="text" name="city" class="form-control" id="inputCity">
                     </div>
                     
                     <div class="col-12">
@@ -42,8 +44,9 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button type="submit" class="btn btn-transi">Sign in</button>
+                      <button type="submit" name="sign" class="btn btn-transi">Sign in</button>
                     </div>
+
                   </form>
             </div>
             <div class="col-md-6 col-ms-12 m-auto text-end">

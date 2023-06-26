@@ -2,67 +2,28 @@
  
  <!--SECTION  Publisher -->
  <section id="publisher" class="publisher bg-light">
-    <div class="container">
-        <div class="col-ms-12 text-center mt-6 my-5">
-            <h1 data-aos="fade-up"  class="text-dark pt-4">PUBLISHER</h1>
-            <div class="border-top border-primary w-25 mx-auto my-4"></div>
-            <p data-aos="fade-up"  class="lead ">For all of the champions in this world</p>
-        </div>
-    
-          <!-- Blog articles -->
-          <div class="pb-3">
-  
-            <!-- Article -->
-            <article data-aos="fade-up" class="card border-0 shadow-sm overflow-hidden mb-4">
-              <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover publisher"  style=" background-image: url({% static 'img/banner.png'%}); min-height: 15rem;">
-                  <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Read later" data-bs-original-title="Read later">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                </div>
-                <div class="col-sm-8">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-3">
-                      <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Startups</a>
-                      <span class="fs-sm text-muted border-start ps-3 ms-3">Maio 06, 2023</span>
-                    </div>
-                    <h3 class="h4 text">
-                      <a class="text-dark" href="blog-single.html">How Agile is Your Forecasting Process?</a>
-                    </h3>
-                    <p>Nulla fringilla arcu justo augue fringilla in nunc volutpat sit. Dui diam, faucibus vitae ultricies vitae mollis nunc elementum. Et, habitasse porta neque tempor tellus ut. Sagittis odio porttitor erat viverra erat neque.</p>
-                    <hr class="my-4">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                        <img  src="{% static 'img/publisher.svg' %}" alt="" class="rounded-circle me-3" width="48" alt="Avatar">
-                        Afonso Miqueias
-                      </a>
-                      <div class="d-flex align-items-center text-muted">
-                        <div class="d-flex align-items-center me-3">
-                          <i class="bx bx-like fs-lg me-1"></i>
-                          <span class="fs-sm">3</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3">
-                          <i class="bx bx-comment fs-lg me-1"></i>
-                          <span class="fs-sm">6</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <i class="bx bx-share-alt fs-lg me-1"></i>
-                          <span class="fs-sm">0</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-  
-          
-          <!-- Load more btn -->
-          <a href="#" class="btn btn-lg btn-transi w-100">
-            <i class="bx bx-down-arrow-alt me-2 lh-1 lead"></i>
-            Show more
-          </a>
+  <div class="container">
+    <div class="col-ms-12 text-center mt-6 my-5">
+        <h1 data-aos="fade-up"  class="text-dark pt-4">PUBLISHER</h1>
+        <div class="border-top border-primary w-25 mx-auto my-4"></div>
+        <p data-aos="fade-up"  class="lead ">For all of the champions in this world</p>
     </div>
+
+    <div  class="row">
+    {% for produto in produtos  %}
+        <div class="col-md-4 col-ms-12">
+            <div  data-aos="flip-left"  class="card">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ produto.title }} </h5>
+
+                  <img class="card-img-top"   src="{{ produto.imagem.url }}" alt=""></a>
+                  <a href="#" class="btn btn-transi">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+ {% endfor %}
+    </div>
+     
+</div>
 </section>
 <!--SECTION  AND-->
