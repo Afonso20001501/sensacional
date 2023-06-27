@@ -6,5 +6,4 @@ from sensac.views import home
 
 urlpatterns = [
     path('', home, name="home")
-
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
