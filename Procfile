@@ -1,0 +1,1 @@
+web: gunicorn sensa.wsgi  --log-file - 
