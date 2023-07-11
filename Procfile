@@ -1,1 +1,1 @@
-web: gunicorn sensac.wsgi  --log-file - 
+web: gunicorn sensa.wsgi  --log-file - 
